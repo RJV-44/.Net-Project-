@@ -40,9 +40,9 @@ The web design should make business operations:
 
 # 3. Design Scope
 
-The final web application design contains **31 primary screens**.
+The final web application design contains **32 primary screens**, including a public-facing Landing Page.
 
-These 31 screens are the approved scope for the Figma design.
+These 32 screens are the approved scope for the Figma design.
 
 Additional dialogs, popups, drawers, loading states, empty states, and confirmation states are considered **UI components/states**, not separate primary screens.
 
@@ -694,16 +694,20 @@ The responsive design should preserve functionality rather than simply shrinking
 
 ---
 
-# 25. Final 31-Screen List
+# 25. Final 32-Screen List
+
+## Public
+
+1. Landing Page
 
 ## Authentication
 
-1. Login
-2. Forgot Password
+2. Login
+3. Forgot Password
 
 ## Dashboard
 
-3. Dashboard
+4. Dashboard
 
 ## Products
 
@@ -770,7 +774,76 @@ The responsive design should preserve functionality rather than simply shrinking
 
 # 26. Screen Specifications
 
-# 26.1 Login
+# 26.1 Landing Page
+
+### Purpose
+
+Introduce StockForge to visitors before authentication and provide a clear path into the web application. This public-facing home page is different from the authenticated Dashboard.
+
+### UI Sections
+
+- Header with StockForge logo, navigation, and Login CTA
+- Hero section with “Hardware Inventory Management, Simplified.”
+- Supporting description of StockForge
+- Primary Login / Get Started CTA
+- Key Features section
+- Why StockForge / business benefits section
+- Simple workflow overview
+- Final call-to-action
+- Footer
+
+### Key Features
+
+- Product Management
+- Inventory Management
+- Purchase Management
+- Sales / Order Management
+- Maintenance Management
+- Reports & Analytics
+
+### Workflow Visual
+
+```text
+Products
+   ↓
+Purchases
+   ↓
+Inventory
+   ↓
+Sales / Orders
+   ↓
+Maintenance
+   ↓
+Reports
+```
+
+### Navigation
+
+```text
+Landing Page
+   ↓
+Login
+   ↓
+Dashboard
+```
+
+### Important Rule
+
+The Landing Page is public and must not display private business data, inventory quantities, customer information, supplier information, purchase orders, sales orders, notifications, or user-specific dashboard content.
+
+### Responsive Behavior
+
+- Desktop: full navigation, large hero, feature grid, workflow, footer
+- Tablet: condensed navigation and responsive feature grid
+- Small screen: collapsed navigation, stacked hero, single-column features, vertical workflow
+
+### Design Style
+
+Use the same StockForge visual system: `#4CAF7D` primary color, light theme, clean typography, subtle borders, restrained shadows, consistent spacing, and professional business-focused styling.
+
+---
+
+# 26.2 Login
 
 ### Purpose
 
@@ -805,7 +878,7 @@ Login
 
 ---
 
-# 26.2 Forgot Password
+# 26.3 Forgot Password
 
 ### Purpose
 
@@ -827,7 +900,7 @@ Login → Forgot Password → Login
 
 ---
 
-# 26.3 Dashboard
+# 26.4 Dashboard
 
 ### Purpose
 
@@ -871,7 +944,7 @@ Important warnings such as low stock and out-of-stock items should be highly vis
 
 ---
 
-# 26.4 Product List
+# 26.5 Product List
 
 ### Purpose
 
@@ -911,7 +984,7 @@ Actions
 
 ---
 
-# 26.5 Add Product
+# 26.6 Add Product
 
 ### Purpose
 
@@ -946,7 +1019,7 @@ Save Product
 
 ---
 
-# 26.6 Product Details
+# 26.7 Product Details
 
 ### Purpose
 
@@ -971,7 +1044,7 @@ Display complete product information.
 
 ---
 
-# 26.7 Edit Product
+# 26.8 Edit Product
 
 ### Purpose
 
@@ -985,7 +1058,7 @@ The interface should clearly distinguish editable and non-editable information w
 
 ---
 
-# 26.8 Category List
+# 26.9 Category List
 
 ### Purpose
 
@@ -1013,7 +1086,7 @@ Actions
 
 ---
 
-# 26.9 Add/Edit Category
+# 26.10 Add/Edit Category
 
 ### UI Elements
 
@@ -1027,7 +1100,7 @@ The same screen structure can be used for both creating and editing.
 
 ---
 
-# 26.10 Supplier List
+# 26.11 Supplier List
 
 ### Purpose
 
@@ -1055,7 +1128,7 @@ Actions
 
 ---
 
-# 26.11 Add Supplier
+# 26.12 Add Supplier
 
 ### Sections
 
@@ -1085,7 +1158,7 @@ Actions
 
 ---
 
-# 26.12 Supplier Details
+# 26.13 Supplier Details
 
 ### UI Sections
 
@@ -1102,13 +1175,13 @@ Actions
 
 ---
 
-# 26.13 Edit Supplier
+# 26.14 Edit Supplier
 
 Use the Add Supplier structure with existing information populated.
 
 ---
 
-# 26.14 Customer List
+# 26.15 Customer List
 
 ### Purpose
 
@@ -1136,7 +1209,7 @@ Actions
 
 ---
 
-# 26.15 Add Customer
+# 26.16 Add Customer
 
 ### Sections
 
@@ -1166,7 +1239,7 @@ Actions
 
 ---
 
-# 26.16 Customer Details
+# 26.17 Customer Details
 
 ### UI Sections
 
@@ -1183,13 +1256,13 @@ Actions
 
 ---
 
-# 26.17 Edit Customer
+# 26.18 Edit Customer
 
 Use the Add Customer structure with existing information populated.
 
 ---
 
-# 26.18 Purchase Order List
+# 26.19 Purchase Order List
 
 ### Purpose
 
@@ -1219,7 +1292,7 @@ Actions
 
 ---
 
-# 26.19 Create Purchase Order
+# 26.20 Create Purchase Order
 
 ### Purpose
 
@@ -1267,7 +1340,7 @@ Submit
 
 ---
 
-# 26.20 Purchase Order Details
+# 26.21 Purchase Order Details
 
 ### UI Sections
 
@@ -1293,7 +1366,7 @@ Actions should only appear when appropriate.
 
 ---
 
-# 26.21 Edit Purchase Order
+# 26.22 Edit Purchase Order
 
 Use the Create Purchase Order layout.
 
@@ -1303,7 +1376,7 @@ Completed/received records should not appear as normally editable.
 
 ---
 
-# 26.22 Sales Order List
+# 26.23 Sales Order List
 
 ### Purpose
 
@@ -1332,7 +1405,7 @@ Actions
 
 ---
 
-# 26.23 Create Sales Order
+# 26.24 Create Sales Order
 
 ### Sections
 
@@ -1373,7 +1446,7 @@ Confirm
 
 ---
 
-# 26.24 Sales Order Details
+# 26.25 Sales Order Details
 
 ### UI Sections
 
@@ -1396,7 +1469,7 @@ Depending on status:
 
 ---
 
-# 26.25 Inventory Overview
+# 26.26 Inventory Overview
 
 ### Purpose
 
@@ -1433,7 +1506,7 @@ Low-stock and out-of-stock items should be immediately noticeable.
 
 ---
 
-# 26.26 Stock Movement History
+# 26.27 Stock Movement History
 
 ### Purpose
 
@@ -1470,7 +1543,7 @@ User
 
 ---
 
-# 26.27 Maintenance List
+# 26.28 Maintenance List
 
 ### Purpose
 
@@ -1499,7 +1572,7 @@ Actions
 
 ---
 
-# 26.28 Maintenance Details
+# 26.29 Maintenance Details
 
 ### UI Sections
 
@@ -1525,7 +1598,7 @@ Actions
 
 ---
 
-# 26.29 Notifications
+# 26.30 Notifications
 
 ### Purpose
 
@@ -1556,7 +1629,7 @@ Related action
 
 ---
 
-# 26.30 Reports & Analytics
+# 26.31 Reports & Analytics
 
 ### Purpose
 
@@ -1601,7 +1674,7 @@ Provide visual business information.
 
 ---
 
-# 26.31 Users & Roles
+# 26.32 Users & Roles
 
 ### Purpose
 
@@ -2043,6 +2116,7 @@ Before considering the Figma design complete:
 
 ## Screens
 
+- [ ] Landing Page
 - [ ] Login
 - [ ] Forgot Password
 - [ ] Dashboard
@@ -2105,7 +2179,7 @@ Before considering the Figma design complete:
 
 The final StockForge web application UI/UX design contains:
 
-## **31 Primary Screens**
+## **32 Primary Screens**
 
 No additional primary screens should be added unless the project requirements are intentionally changed.
 
